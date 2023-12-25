@@ -17,6 +17,7 @@ public class RegionManager {
         this.regions = new ArrayList<>();
     }
 
+    //
     public void addRegion(JTextField regionTextField) {
         String regionName = regionTextField.getText();
         if (!regionName.isEmpty()) {
