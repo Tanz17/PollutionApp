@@ -8,13 +8,13 @@ import ru.tanz.util.Pair;
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class RecommendationManager {
-    Pair<String, String> CATEGORY_ONE = new Pair<>("Категория I",
+    Pair<String, String> CATEGORY_ONE = new Pair<>("Допустимое загрязнение (Категория I)",
             "Снижение уровня воздействия источников загрязнения почв. Осуществление мероприятий по снижению доступности токсикантов для растений (известкование, внесение органических удобрений)");
-    Pair<String, String> CATEGORY_TWO = new Pair<>("Категория II",
+    Pair<String, String> CATEGORY_TWO = new Pair<>("Умеренно опасное загрязнение (Категория II)",
             "Снижение уровня воздействия источников загрязнения почв. Осуществление мероприятий по снижению доступности токсикантов для растений (известкование, внесение органических удобрений)");
-    Pair<String, String> CATEGORY_THREE = new Pair<>("Категория III",
+    Pair<String, String> CATEGORY_THREE = new Pair<>("Высоко опасное загрязнение (Категория III)",
             "Кроме мероприятий, указанных для категории I, обязательный контроль за содержанием токсикантов в растениях, используемых в качестве продуктов питания и кормов");
-    Pair<String, String> CATEGORY_FOUR = new Pair<>("Категория IV",
+    Pair<String, String> CATEGORY_FOUR = new Pair<>("Чрезвычайно опасное загрязнение (Категория IV)",
             "Мероприятия по снижению уровня загрязнения и связыванию токсикантов в почвах. Контроль за содержанием токсикантов в зоне дыхания рабочих, в поверхностных и подземных водах");
 
     public Pair<String, String> parseRecommendationForZc(double zc){

@@ -22,7 +22,6 @@ public class RegionManager {
         String regionName = regionTextField.getText();
         if (!regionName.isEmpty()) {
             regions.add(new Region(regionName));
-//            updateRegionComboBox();
             regionTextField.setText("");
         }
     }
