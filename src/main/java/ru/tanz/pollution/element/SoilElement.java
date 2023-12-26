@@ -27,6 +27,6 @@ public class SoilElement {
     }
 
     public double calculatePollution() {
-        return concentration / 100;
+        return concentration;
     }
 }
