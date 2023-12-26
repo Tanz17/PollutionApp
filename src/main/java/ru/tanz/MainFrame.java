@@ -42,21 +42,14 @@ public class MainFrame extends JPanel {
     JButton showRecommendation;
     ChartPanel chartPanel;
 
-    public MainFrame(String appName, int width, int height) {
-        frame = new JFrame(appName);
-        frame.getContentPane().add(this);
-        frame.setMinimumSize(new Dimension(width, height));
-        frame.setExtendedState(JFrame.NORMAL);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
+    public MainFrame(JFrame frame) {
+        this.frame = frame;
         themeManager = new ThemeManager(frame);
+
         regionManager = new RegionManager();
         recommendationManager = new RecommendationManager();
         elementManager = new ElementManager();
-        frame.setBackground(new Color(22, 136, 255));
         themeManager.setTheme("Dark");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);

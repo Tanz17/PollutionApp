@@ -25,13 +25,8 @@ public class ThemeManager {
     public ThemeManager(Component window) {
         this.window = window;
 
-        // свои темки
-        // https://www.formdev.com/flatlaf/theme-editor/
         Light.installLafInfo();
         Dark.installLafInfo();
-
-        // другие темки так ставятся
-        // FlatGitHubDarkContrastIJTheme.installLafInfo();
 
         final OsThemeDetector detector = OsThemeDetector.getDetector();
         var selectedTheme = detector.isDark() ? "Dark" : "Light";
@@ -44,6 +39,7 @@ public class ThemeManager {
                     .filter(x -> x.getName().equals(theme))
                     .findFirst()
                     .orElseThrow();
+
 
             var clazz = (Class<FlatLaf>) Class.forName(themeInfo.getClassName());
             var instance = clazz.getDeclaredConstructor().newInstance();
